@@ -1,0 +1,27 @@
+<template>
+  <div id="app">
+    <vee-button>默认按钮</vee-button>
+
+    <vee-button type="primary">普通按钮</vee-button>
+    <vee-button type="warning">警告按钮</vee-button>
+    <vee-button type="danger">危险按钮</vee-button>
+    <vee-button type="info">提示按钮</vee-button>
+    <vee-button type="success">成功按钮</vee-button>
+
+    <vee-button type="info" icon="guanyuwomen">图标按钮</vee-button>
+    <vee-button type="info" icon="xuexi"></vee-button>
+    <vee-button type="info" icon="guanyuwomen" icon-position="right">图标按钮</vee-button>
+
+    <vee-icon icon="kefu"></vee-icon>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+<style lang="scss">
+
+</style>

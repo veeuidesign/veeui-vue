@@ -1,0 +1,34 @@
+{
+  "name": "veeui-vue",
+  "version": "0.1.0",
+  "private": false,
+  "main": "./dist/veeui-vue.umd.min.js",
+  "description": "Vee UI Library based on Vue Framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veeuidesign/veeui-vue.git"
+  },
+  "keywords": ["vee","ui"],
+  "author": "veeui",
+  "license": "ISC",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lib": "vue-cli-service build --target lib --name veeui-vue ./src/packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-unit-mocha": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.1.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
