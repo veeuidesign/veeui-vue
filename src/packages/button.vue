@@ -1,6 +1,7 @@
 <template>
-  <button class="vee-button" :class="btnClass">
-      <vee-icon :icon="icon" v-if="icon" class="icon"></vee-icon>
+  <button class="vee-button" :class="btnClass" :disabled="loading" @click="$emit('click',$event)">
+      <vee-icon :icon="icon" v-if="icon && !loading" class="icon"></vee-icon>
+      <vee-icon icon="Loading" v-if="loading" class="icon"></vee-icon>
       <span v-if="this.$slots.default">
         <slot></slot>
       </span>
@@ -33,6 +34,10 @@ export default {
                 }
                 return true
             }
+        },
+        loading: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -130,6 +135,10 @@ $active-color: #3a8ee6;
             margin-left: 0;
             margin-right: 4px;
         }
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
     }
 }
 </style>
