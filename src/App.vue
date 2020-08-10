@@ -98,7 +98,61 @@
           </vee-col>
         </vee-row>
       </li>
-      <li></li>
+      <li>
+        <h3>容器</h3>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-main class="vee-container-medium">Main</vee-main>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-main class="vee-container-medium">Main</vee-main>
+          <vee-footer class="vee-container-dark">Footer</vee-footer>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+          <vee-main class="vee-container-medium">Main</vee-main>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-container>
+            <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+            <vee-main class="vee-container-medium">Main</vee-main>
+          </vee-container>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-container>
+            <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+            <vee-container>
+              <vee-main class="vee-container-medium">Main</vee-main>
+              <vee-footer class="vee-container-dark">Footer</vee-footer>
+            </vee-container>
+          </vee-container>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+          <vee-container>
+            <vee-header class="vee-container-dark">Header</vee-header>
+            <vee-main class="vee-container-medium">Main</vee-main>
+          </vee-container>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+          <vee-container>
+            <vee-header class="vee-container-dark">Header</vee-header>
+            <vee-main class="vee-container-medium">Main</vee-main>
+            <vee-footer class="vee-container-dark">Footer</vee-footer>
+          </vee-container>
+        </vee-container>
+      </li>
       <li></li>
       <li></li>
       <li></li>
@@ -159,6 +213,31 @@ $border-radius: 4px;
 
     &-light {
       background: #ccc;
+    }
+  }
+
+  .vee-container {
+    &-dark,
+    &-medium,
+    &-light {
+      color: #fff;
+      text-align: center;
+    }
+    
+
+    &-dark {
+      background: #222;
+      line-height: 60px;
+    }
+
+    &-medium {
+      background: #666;
+      line-height: 160px;
+    }
+
+    &-light {
+      background: #aaa;
+      line-height: 200px;
     }
   }
 }
