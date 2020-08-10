@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils'; // Vue提供的快速测试方法
 import { expect } from 'chai';
 
-import Button from '@/packages/button.vue';
-import Icon from '@/packages/icon.vue';
+import Button from '@/packages/Button/button.vue';
+import Icon from '@/packages/Icon/icon.vue';
 
 describe('button.vue', () => {
     it('1.测试button能否正常显示slot里的内容', () => {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import '../styles/icon'
+import '@/styles/icon'
 export default {
     name: 'vee-icon',
     props: {
