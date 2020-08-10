@@ -1,7 +1,7 @@
 <template>
   <button class="vee-button" :class="btnClass" :disabled="loading" @click="$emit('click',$event)">
       <vee-icon :icon="icon" v-if="icon && !loading" class="icon"></vee-icon>
-      <vee-icon icon="Loading" v-if="loading" class="icon"></vee-icon>
+      <vee-icon icon="loading" v-if="loading" class="icon"></vee-icon>
       <span v-if="this.$slots.default">
         <slot></slot>
       </span>

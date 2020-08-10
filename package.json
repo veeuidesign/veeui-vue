@@ -8,13 +8,17 @@
     "type": "git",
     "url": "https://github.com/veeuidesign/veeui-vue.git"
   },
-  "keywords": ["vee","ui"],
+  "keywords": [
+    "vee",
+    "ui"
+  ],
   "author": "veeui",
   "license": "ISC",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "test": "karma start",
     "lib": "vue-cli-service build --target lib --name veeui-vue ./src/packages/index.js"
   },
   "dependencies": {
@@ -27,6 +31,14 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/test-utils": "^1.0.3",
     "chai": "^4.1.2",
+    "karma": "^5.1.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^8.1.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"

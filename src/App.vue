@@ -19,7 +19,7 @@
       <vee-button icon="arrow-right" icon-position="right">下一页</vee-button>
     </vee-button-group>
 
-    <vee-icon icon="kefu"></vee-icon>
+    <vee-icon icon="location"></vee-icon>
   </div>
 </template>
 
