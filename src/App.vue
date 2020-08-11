@@ -153,15 +153,25 @@
           </vee-container>
         </vee-container>
       </li>
-      <li></li>
+      <li>
+        <h3>输入框</h3>
+        <span class="vee-break"></span>
+        <vee-input v-model="value" type="text" placeholder="请输入内容" name="username"></vee-input>&nbsp;
+        <vee-input v-model="value" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
+        <vee-input v-model="value" disabled type="text" placeholder="请输入内容" name="username"></vee-input>&nbsp;
+        <vee-input v-model="value" clearable type="text" placeholder="请输入内容" name="username"></vee-input>&nbsp;
+        <vee-input v-model="value" show-password type="password" placeholder="请输入内容" name="userpassword"></vee-input>
+        <span class="vee-break"></span>
+        <vee-input v-model="value" prefix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
+        <vee-input v-model="value" suffix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
+        {{value}}
+      </li>
       <li></li>
       <li></li>
       <li></li>
       <li></li>
       <li></li>
     </ul>
-    
-    
 
     
   </div>
@@ -170,6 +180,11 @@
 <script>
 export default {
   name: 'App',
+  data() {
+    return {
+      value: ''
+    }
+  },
   methods: {
     fn(e) {
       console.log(e)
