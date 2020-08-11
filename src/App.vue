@@ -166,7 +166,41 @@
         <vee-input v-model="value" suffix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
         {{value}}
       </li>
-      <li></li>
+      <li>
+        <h3>文件上传</h3>
+        <span class="vee-break"></span>
+        <p class="vee-note">
+          name 输入框提交到后台的字段名字<br>
+          action 提交到后端的路径<br>
+          limit 限制提交个数<br>
+          on-exceed 用来如果超出限制后方法<br>
+          on-change 上传文件发生变化后执行方法<br>
+          on-success 上传成功时候会触发<br>
+          on-error 上传失败时候会触发<br>
+          fileList 显示已经上传过的文件<br>
+        </p>
+        <span class="vee-break"></span>
+        <vee-upload
+          name="avatar"
+          action="http://localhost:3000/upload"
+          :file-list="fileList"
+          :limit="3"
+          accept="image/jpeg"
+          multiple
+          :on-exceed="handleExceed"
+          :on-change="handleChange"
+          :on-success="handleSuccess"
+          :on-error="handleError"
+          :on-progress="handleProgress"
+          :beforeUpload="beforeUpload"
+          drag
+        >
+          <vee-button type="primary" icon="upload1">上传文件</vee-button>
+          <div slot="tip">
+            只能上传jpg/png文件，且不超过500kb
+          </div>
+        </vee-upload>
+      </li>
       <li></li>
       <li></li>
       <li></li>
@@ -182,12 +216,47 @@ export default {
   name: 'App',
   data() {
     return {
-      value: ''
+      value: '',
+      fileList: [
+        {
+          url: 'xxx',
+          name: 'aaa'
+        },
+        {
+          url: 'xxx',
+          name: 'bbb'
+        },
+      ]
     }
   },
   methods: {
     fn(e) {
       console.log(e)
+    },
+    handleExceed(files, fileList) {
+      console.log('超过限制了')
+    },
+    handleChange(file) {
+      // console.log('file', file)
+    },
+    handleSuccess() {
+
+    },
+    handleError() {
+
+    },
+    handleProgress() {
+
+    },
+    beforeUpload(rawFile) {
+      if(rawFile.size / 1024 > 500) {
+        console.log('当前超过了最大限制');
+        return false;
+      } else if ( !( /\.(?:jpg|png|jpeg)$/i.test(rawFile.name)) ) {
+        console.log('上传文件类型不符合要求');
+        return false
+      }
+      return true;
     }
   }
 }
@@ -203,6 +272,11 @@ $border-radius: 4px;
   .vee-break {
     display:block;
     margin: 10px;
+  }
+
+  .vee-note {
+    font-size: 12px;
+    color: #999;
   }
 
   ul>li {

@@ -11,6 +11,8 @@ import Footer from '@/packages/Container/footer.vue';
 import Header from '@/packages/Container/header.vue';
 import Main from '@/packages/Container/main.vue';
 import Input from '@/packages/Input/input.vue';
+import Upload from '@/packages/Upload/upload.vue';
+import Progress from '@/packages/Progress/progress.vue';
 
 const install = (Vue) => {
     Vue.component(Button.name, Button);
@@ -24,6 +26,8 @@ const install = (Vue) => {
     Vue.component(Header.name, Header);
     Vue.component(Main.name, Main);
     Vue.component(Input.name, Input);
+    Vue.component(Upload.name, Upload);
+    Vue.component(Progress.name, Progress);
 }
 
 if(typeof window.Vue != 'undefined') {
