@@ -12,6 +12,8 @@
         :disabled="disabled"
         ref="input"
         @input="$emit('input', $event.target.value)"
+        @focus="$emit('focus', $event.target.value)"
+        @change="$emit('change', $event)"
       >
       <vee-icon 
         :icon="suffixIcon" 

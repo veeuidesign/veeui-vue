@@ -201,7 +201,12 @@
           </div>
         </vee-upload>
       </li>
-      <li></li>
+      <li>
+        <h3>日历</h3>
+        <span class="vee-break"></span>
+        {{date}}<vee-date-picker v-model="date" :date="date"></vee-date-picker>&nbsp;
+        {{dateRange}}<vee-date-range-picker v-model="dateRange"></vee-date-range-picker>
+      </li>
       <li></li>
       <li></li>
       <li></li>
@@ -226,7 +231,9 @@ export default {
           url: 'xxx',
           name: 'bbb'
         },
-      ]
+      ],
+      date: '',
+      dateRange: []
     }
   },
   methods: {
