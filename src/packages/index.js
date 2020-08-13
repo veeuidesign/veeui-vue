@@ -15,6 +15,8 @@ import Upload from '@/packages/Upload/upload.vue';
 import Progress from '@/packages/Progress/progress.vue';
 import DatePicker from '@/packages/DatePicker/date-picker.vue';
 import DateRangePicker from '@/packages/DatePicker/date-range-picker.vue';
+// 指令
+import infiniteScroll from '@/packages/InfiniteScroll/infiniteScroll.js';
 
 const install = (Vue) => {
     Vue.component(Button.name, Button);
@@ -32,6 +34,8 @@ const install = (Vue) => {
     Vue.component(Progress.name, Progress);
     Vue.component(DatePicker.name, DatePicker);
     Vue.component(DateRangePicker.name, DateRangePicker);
+
+    Vue.directive(infiniteScroll.name, infiniteScroll);
 }
 
 if(typeof window.Vue != 'undefined') {

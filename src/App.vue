@@ -207,7 +207,27 @@
         {{date}}<vee-date-picker v-model="date" :date="date"></vee-date-picker>&nbsp;
         {{dateRange}}<vee-date-range-picker v-model="dateRange"></vee-date-range-picker>
       </li>
-      <li></li>
+      <li>
+        <h3>无限滚动</h3>
+        <span class="vee-break"></span>
+        <div >
+          <div>
+            <ul 
+              style="overflow-y:scroll"
+              class="vee-infinite-box" 
+              v-infinite-scroll="load"
+              infinite-scroll-disabled="disabled"
+              infinite-scroll-delay="delay"
+              infinite-scroll-distance="distance"
+              infinite-scroll-immediate="immediate"
+            >
+              <li v-for="c in count" :key="c">
+                {{c}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
       <li></li>
       <li></li>
     </ul>
@@ -233,7 +253,12 @@ export default {
         },
       ],
       date: '',
-      dateRange: []
+      dateRange: [],
+      count: 0,
+      disabled: false,
+      delay: 200,
+      distance: 10,
+      immediate: true
     }
   },
   methods: {
@@ -264,12 +289,17 @@ export default {
         return false
       }
       return true;
+    },
+    load() {
+      this.count += 2;
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import '@/styles/_var.scss';
+
 $height: 30px;
 $border-radius: 4px;
 
@@ -335,6 +365,12 @@ $border-radius: 4px;
       background: #aaa;
       line-height: 200px;
     }
+  }
+
+  .vee-infinite-box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid $primary;
   }
 }
 </style>
