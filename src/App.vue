@@ -242,7 +242,31 @@
           <vee-button type="primary" slot="reference">点我弹窗</vee-button>
         </vee-popover>
       </li>
-      <li></li>
+      <li>
+        <h3>轮播图</h3>
+        <span class="vee-break"></span>
+        <vee-carousel
+          height="200px"
+          autoplay
+          :delay="2000"
+          :initial-index="0"
+          loop
+          @change="change"
+        >
+          <vee-carousel-item>
+            <div>1</div>
+          </vee-carousel-item>
+          <vee-carousel-item>
+            <div>2</div>
+          </vee-carousel-item>
+          <vee-carousel-item>
+            <div>3</div>
+          </vee-carousel-item>
+        </vee-carousel>
+      </li>
+      <li>
+
+      </li>
     </ul>
 
     
@@ -306,6 +330,9 @@ export default {
     },
     load() {
       this.count += 2;
+    },
+    change(index) {
+      
     }
   }
 }

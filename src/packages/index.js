@@ -16,6 +16,8 @@ import Progress from '@/packages/Progress/progress.vue';
 import DatePicker from '@/packages/DatePicker/date-picker.vue';
 import DateRangePicker from '@/packages/DatePicker/date-range-picker.vue';
 import Popover from '@/packages/Popover/popover.vue';
+import Carousel from '@/packages/Carousel/carousel.vue';
+import CarouselItem from '@/packages/Carousel/carousel-item.vue';
 // 指令
 import infiniteScroll from '@/packages/InfiniteScroll/infiniteScroll.js';
 
@@ -36,6 +38,8 @@ const install = (Vue) => {
     Vue.component(DatePicker.name, DatePicker);
     Vue.component(DateRangePicker.name, DateRangePicker);
     Vue.component(Popover.name, Popover);
+    Vue.component(Carousel.name, Carousel);
+    Vue.component(CarouselItem.name, CarouselItem);
 
     Vue.directive(infiniteScroll.name, infiniteScroll);
 }
