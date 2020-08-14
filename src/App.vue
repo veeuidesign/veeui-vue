@@ -228,7 +228,20 @@
           </div>
         </div>
       </li>
-      <li></li>
+      <li>
+        <h3>弹出框</h3>
+        <span class="vee-break"></span>
+        <vee-popover
+          v-model="show"
+          width="200px"
+          title="标题"
+          content="这是一个弹窗"
+          trigger="click"
+          placement="right"
+        >
+          <vee-button type="primary" slot="reference">点我弹窗</vee-button>
+        </vee-popover>
+      </li>
       <li></li>
     </ul>
 
@@ -258,7 +271,8 @@ export default {
       disabled: false,
       delay: 200,
       distance: 10,
-      immediate: true
+      immediate: true,
+      show: ''
     }
   },
   methods: {
