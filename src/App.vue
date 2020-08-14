@@ -265,7 +265,13 @@
         </vee-carousel>
       </li>
       <li>
-
+        <h3>分页器</h3>
+        <span class="vee-break"></span>
+        <vee-pagination
+          :total="10"
+          :pager-count="7"
+          :current-page.sync="currentPage"
+        ></vee-pagination>
       </li>
     </ul>
 
@@ -296,7 +302,8 @@ export default {
       delay: 200,
       distance: 10,
       immediate: true,
-      show: ''
+      show: '',
+      currentPage: 1
     }
   },
   methods: {
