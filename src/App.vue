@@ -273,6 +273,17 @@
           :current-page.sync="currentPage"
         ></vee-pagination>
       </li>
+      <li>
+        <h3>表格</h3>
+        <span class="vee-break"></span>
+        <vee-table
+          :columns="columns"
+          :data="data"
+          @on-select="select"
+        >
+
+        </vee-table>
+      </li>
     </ul>
 
     
@@ -303,7 +314,43 @@ export default {
       distance: 10,
       immediate: true,
       show: '',
-      currentPage: 1
+      currentPage: 1,
+      columns: [
+        {
+          title: 'Name',
+          name: 'name'
+        },
+        {
+          title: 'Age',
+          name: 'age'
+        },
+        {
+          title: 'Address',
+          name: 'address'
+        }
+      ],
+      data: [
+        {
+          name: 'aaa',
+          age: 17,
+          address: 'beijing'
+        },
+        {
+          name: 'bbb',
+          age: 18,
+          address: 'shanghai'
+        },
+        {
+          name: 'ccc',
+          age: 19,
+          address: 'guangzhou'
+        },
+        {
+          name: 'ddd',
+          age: 20,
+          address: 'shenzhen'
+        }
+      ]
     }
   },
   methods: {
@@ -340,6 +387,9 @@ export default {
     },
     change(index) {
       
+    },
+    select(selection, row) {
+
     }
   }
 }

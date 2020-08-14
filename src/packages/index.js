@@ -19,6 +19,7 @@ import Popover from '@/packages/Popover/popover.vue';
 import Carousel from '@/packages/Carousel/carousel.vue';
 import CarouselItem from '@/packages/Carousel/carousel-item.vue';
 import Pagination from '@/packages/Pagination/pagination.vue';
+import Table from '@/packages/Table/table.vue';
 // 指令
 import infiniteScroll from '@/packages/InfiniteScroll/infiniteScroll.js';
 
@@ -42,6 +43,7 @@ const install = (Vue) => {
     Vue.component(Carousel.name, Carousel);
     Vue.component(CarouselItem.name, CarouselItem);
     Vue.component(Pagination.name, Pagination);
+    Vue.component(Table.name, Table);
 
     Vue.directive(infiniteScroll.name, infiniteScroll);
 }
