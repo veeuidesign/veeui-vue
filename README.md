@@ -1,19 +1,19 @@
-# vee-ui
+# v3
 
-## Vee UI for Vue
-
-[![npm version](https://badge.fury.io/js/veeui-vue.svg)](https://badge.fury.io/js/veeui-vue)
-
-## QuickStart
-
-```bash
-npm install veeui-vue
+## Project setup
+```
+yarn install
 ```
 
-## Useage
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
+### Compiles and minifies for production
 ```
-import VeeUI from 'veeui-vue';
-import 'veeui-vue/dist/veeui-vue.css'
-Vue.use(VeeUI)
+yarn build
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
