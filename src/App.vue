@@ -34,6 +34,72 @@
         <vee-icon icon="success"></vee-icon>&nbsp;
         <vee-icon icon="paperclip"></vee-icon>&nbsp;
       </li>
+      <li>
+        <h3>布局</h3>
+        <span class="vee-break"></span>
+        <vee-row>
+          <vee-col :span="12">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :span="12">
+            <div class="vee-col-light"></div>
+          </vee-col>
+        </vee-row>
+        <span class="vee-break"></span>
+        <vee-row>
+          <vee-col :span="24">
+            <div class="vee-col-medium"></div>
+          </vee-col>
+        </vee-row>
+        <span class="vee-break"></span>
+        <vee-row>
+          <vee-col :span="6" :offset="1">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :span="6" :offset="3">
+            <div class="vee-col-light"></div>
+          </vee-col>
+        </vee-row>
+        <span class="vee-break"></span>
+        <vee-row :gutter="20">
+          <vee-col :span="6">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :span="6">
+            <div class="vee-col-light"></div>
+          </vee-col>
+          <vee-col :span="6">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :span="6">
+            <div class="vee-col-light"></div>
+          </vee-col>
+        </vee-row>
+        <span class="vee-break"></span>
+        <vee-row justify="end">
+          <vee-col :span="6">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :span="6">
+            <div class="vee-col-light"></div>
+          </vee-col>
+        </vee-row>
+        <span class="vee-break"></span>
+        <vee-row :gutter="10">
+          <vee-col :xs="8" :sm="6" :md="4" :lg="3" :xl="{'span':2,'offset':23,'aaa':1}">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+            <div class="vee-col-light"></div>
+          </vee-col>
+          <vee-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+            <div class="vee-col-dark"></div>
+          </vee-col>
+          <vee-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+            <div class="vee-col-light"></div>
+          </vee-col>
+        </vee-row>
+      </li>
     </ul>
   </div>
 </template>
