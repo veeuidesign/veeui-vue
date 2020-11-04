@@ -100,17 +100,150 @@
           </vee-col>
         </vee-row>
       </li>
+      <li>缺少容器</li>
+      <li>
+        <h3>输入框</h3>
+        <span class="vee-break"></span>
+        <vee-input v-model="value" type="text" placeholder="请输入内容" name="username"></vee-input>&nbsp;
+        <vee-input v-model="value" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
+        <vee-input v-model="value" disabled type="text" placeholder="请输入内容" name="username"></vee-input>&nbsp;
+        <vee-input v-model="value" clearable type="text" placeholder="请输入内容" name="username"></vee-input>&nbsp;
+        <vee-input v-model="value" show-password type="password" placeholder="请输入内容" name="userpassword"></vee-input>
+        <span class="vee-break"></span>
+        <vee-input v-model="value" prefix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
+        <vee-input v-model="value" suffix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
+        {{value}}
+      </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     
+  },
+  setup() {
+    let data = {
+      value: '',
+      fileList: [
+        {
+          url: 'xxx',
+          name: 'aaa'
+        },
+        {
+          url: 'xxx',
+          name: 'bbb'
+        },
+      ],
+      date: '',
+      dateRange: [],
+      count: 0,
+      disabled: false,
+      delay: 200,
+      distance: 10,
+      immediate: true,
+      show: '',
+      currentPage: 1,
+      columns: [
+        {
+          title: 'Name',
+          name: 'name'
+        },
+        {
+          title: 'Age',
+          name: 'age'
+        },
+        {
+          title: 'Address',
+          name: 'address'
+        }
+      ],
+      data: [
+        {
+          name: 'aaa',
+          age: 17,
+          address: 'beijing'
+        },
+        {
+          name: 'bbb',
+          age: 18,
+          address: 'shanghai'
+        },
+        {
+          name: 'ccc',
+          age: 19,
+          address: 'guangzhou'
+        },
+        {
+          name: 'ddd',
+          age: 20,
+          address: 'shenzhen'
+        }
+      ]
+    };
+
+    function fn(e:any) {
+      console.log(e)
+    };
+
+    function handleExceed(files: any, fileList: any) {
+      console.log('超过限制了')
+    };
+
+    function handleChange(file: any) {
+      // console.log('file', file)
+    };
+
+    function handleSuccess() {
+    };
+
+    function handleError() {
+    };
+    
+    function handleProgress() {
+    };
+    
+    function beforeUpload(rawFile: { size: number; name: string; }) {
+      if(rawFile.size / 1024 > 500) {
+        console.log('当前超过了最大限制');
+        return false;
+      } else if ( !( /\.(?:jpg|png|jpeg)$/i.test(rawFile.name)) ) {
+        console.log('上传文件类型不符合要求');
+        return false
+      }
+      return true;
+    };
+    
+    let count = 0;
+
+    function load() {
+      count += 2;
+    };
+    
+    function change(index: any) {
+      
+    };
+    
+    function select(selection: any, row: any) {
+    }
+
+    return {
+      ...data,
+      fn,
+      handleExceed,
+      handleChange,
+      handleSuccess,
+      handleError,
+      handleProgress,
+      beforeUpload,
+      load,
+      change,
+      select
+    }
   }
 });
 </script>
