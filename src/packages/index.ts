@@ -5,6 +5,7 @@ import ButtonGroup from '@/packages/Button/button-group.vue';
 import Icon from '@/packages/Icon/icon.vue';
 import Row from '@/packages/Layout/row.vue';
 import Col from '@/packages/Layout/col.vue';
+import Input from '@/packages/Input/input.vue';
 
 function install(app: App) {
     app.component(Button.name, Button);
@@ -12,6 +13,7 @@ function install(app: App) {
     app.component(Icon.name, Icon);
     app.component(Row.name, Row);
     app.component(Col.name, Col);
+    app.component(Input.name, Input);
 }
 
 export default {
