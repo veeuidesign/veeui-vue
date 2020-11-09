@@ -100,7 +100,61 @@
           </vee-col>
         </vee-row>
       </li>
-      <li>缺少容器</li>
+      <li>
+        <h3>容器</h3>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-main class="vee-container-medium">Main</vee-main>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-main class="vee-container-medium">Main</vee-main>
+          <vee-footer class="vee-container-dark">Footer</vee-footer>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+          <vee-main class="vee-container-medium">Main</vee-main>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-container>
+            <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+            <vee-main class="vee-container-medium">Main</vee-main>
+          </vee-container>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-header class="vee-container-dark">Header</vee-header>
+          <vee-container>
+            <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+            <vee-container>
+              <vee-main class="vee-container-medium">Main</vee-main>
+              <vee-footer class="vee-container-dark">Footer</vee-footer>
+            </vee-container>
+          </vee-container>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+          <vee-container>
+            <vee-header class="vee-container-dark">Header</vee-header>
+            <vee-main class="vee-container-medium">Main</vee-main>
+          </vee-container>
+        </vee-container>
+        <span class="vee-break"></span>
+        <vee-container>
+          <vee-aside class="vee-container-light" width="200px">Aside</vee-aside>
+          <vee-container>
+            <vee-header class="vee-container-dark">Header</vee-header>
+            <vee-main class="vee-container-medium">Main</vee-main>
+            <vee-footer class="vee-container-dark">Footer</vee-footer>
+          </vee-container>
+        </vee-container>
+      </li>
       <li>
         <h3>输入框</h3>
         <span class="vee-break"></span>
