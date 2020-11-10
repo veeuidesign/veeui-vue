@@ -11,6 +11,7 @@ import Container from '@/packages/Container/container.vue';
 import Footer from '@/packages/Container/footer.vue';
 import Header from '@/packages/Container/header.vue';
 import Main from '@/packages/Container/main.vue';
+import Popover from '@/packages/Popover/popover.vue';
 
 function install(app: App) {
     app.component(Button.name, Button);
@@ -24,6 +25,7 @@ function install(app: App) {
     app.component(Footer.name, Footer);
     app.component(Header.name, Header);
     app.component(Main.name, Main);
+    app.component(Popover.name, Popover);
 }
 
 export default {
