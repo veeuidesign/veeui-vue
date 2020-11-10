@@ -168,6 +168,29 @@
         <vee-input v-model="value" suffix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></vee-input>&nbsp;
         {{value}}
       </li>
+      <li>
+        缺少文件上传
+      </li>
+      <li>
+        缺少日历
+      </li>
+      <li>
+        缺少无限滚动
+      </li>
+      <li>
+        <h3>弹出框</h3>
+        <span class="vee-break"></span>
+        <vee-popover
+          v-model="show"
+          width="200px"
+          title="标题"
+          content="这是一个弹窗"
+          trigger="click"
+          placement="right"
+        >
+          <vee-button type="primary">点我弹窗</vee-button>
+        </vee-popover>
+      </li>
     </ul>
   </div>
 </template>
